@@ -3,17 +3,17 @@ import { client } from "../libs/client";
 
 export default function Home({ news }) {
   return (
-    <div>
+    <>
       <ul>
         {news.map((news) => (
           <li key={news.id}>
             <Link href={`/news/${news.id}`}>
-              <a>{news.title}</a>
+              <a className="text-xl font-semibold">{news.title}</a>
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 
